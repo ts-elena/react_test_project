@@ -1,0 +1,24 @@
+.header {
+  /*z-index: 2;
+  position: absolute;
+  width: 345px;
+  height: $header-height;
+  box-shadow: -5px 4px 49px -20px rgba(222, 222, 222, 1);
+  */
+  padding: 3rem 1.5rem 0 1.5rem;
+  background-color: $color-primary-grey;
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+
+  .header__icon-row {
+    color: #969696;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header__text-row {
+    color: white;
+    margin-top: 2rem;
+    padding-bottom: 1.5rem;
+  }
+}

@@ -1,0 +1,22 @@
+.pic-row {
+  margin: 2rem 1rem 2rem 1rem;
+  background-image: linear-gradient(
+    to bottom,
+    rgba($color-violet, 0.5),
+    rgba($color-violet-light, 0.5)
+  );
+  box-shadow: -5px -28px 49px -104px rgba(222, 222, 222, 1);
+
+  border-radius: 1rem;
+  padding: 1rem;
+
+  .pic-row__pic-text-box {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+
+    .pic-row__pic-text-box--text {
+      margin-left: 1rem;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.underline-btn-wrap {
+  display: flex;
+  justify-content: center;
+
+  .underline-btn-wrap__btn {
+    text-transform: uppercase;
+    margin: 2rem;
+    font-size: 2rem;
+    width: 16rem;
+    background-image: linear-gradient(
+      to bottom,
+      rgba($color-violet, 0.2),
+      rgba($color-violet-light, 0.2)
+    );
+    background-repeat: no-repeat;
+    background-size: 16rem 0.2em;
+    background-position: 0 88%;
+    transition: background-size 0.25s ease-in;
+    color: white;
+
+    &:hover {
+      background-size: 100% 88%;
+    }
+
+    &:focus {
+      background-size: 100% 88%;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+html {
+  box-sizing: border-box;
+
+  // Defines what 1ram should be, not typography
+  font-size: 62.5%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: $color-primary-black;
+}
+
+*,
+*:not(img),
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+}

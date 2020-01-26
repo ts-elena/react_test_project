@@ -1,13 +1,88 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #1c1c1c; }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+*,
+*:not(img),
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0; }
+
+* {
+  font-family: "Comfortaa", cursive; }
+
+.pic-row__pic-text-box--text {
+  font-size: 2rem; }
+
+.header {
+  font-weight: 500;
+  font-size: 2.6rem; }
+  .header .header__icon-row {
+    font-size: 2.2rem; }
+
+.header {
+  /*z-index: 2;
+  position: absolute;
+  width: 345px;
+  height: $header-height;
+  box-shadow: -5px 4px 49px -20px rgba(222, 222, 222, 1);
+  */
+  padding: 3rem 1.5rem 0 1.5rem;
+  background-color: #313131;
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem; }
+  .header .header__icon-row {
+    color: #969696;
+    display: flex;
+    justify-content: space-between; }
+  .header .header__text-row {
+    color: white;
+    margin-top: 2rem;
+    padding-bottom: 1.5rem; }
+
+.underline-btn-wrap {
+  display: flex;
+  justify-content: center; }
+  .underline-btn-wrap .underline-btn-wrap__btn {
+    text-transform: uppercase;
+    margin: 2rem;
+    font-size: 2rem;
+    width: 16rem;
+    background-image: linear-gradient(to bottom, rgba(101, 78, 163, 0.2), rgba(234, 175, 200, 0.2));
+    background-repeat: no-repeat;
+    background-size: 16rem 0.2em;
+    background-position: 0 88%;
+    transition: background-size 0.25s ease-in;
+    color: white; }
+    .underline-btn-wrap .underline-btn-wrap__btn:hover {
+      background-size: 100% 88%; }
+    .underline-btn-wrap .underline-btn-wrap__btn:focus {
+      background-size: 100% 88%; }
+
+.pic-row {
+  margin: 2rem 1rem 2rem 1rem;
+  background-image: linear-gradient(to bottom, rgba(101, 78, 163, 0.5), rgba(234, 175, 200, 0.5));
+  box-shadow: -5px -28px 49px -104px #dedede;
+  border-radius: 1rem;
+  padding: 1rem; }
+  .pic-row .pic-row__pic-text-box {
+    width: 100vw;
+    display: flex;
+    align-items: center; }
+    .pic-row .pic-row__pic-text-box .pic-row__pic-text-box--text {
+      margin-left: 1rem; }
+
+.pic-row__pic-text-box--pic {
+  border-radius: 50%;
+  width: 10rem; }
+  .pic-row__pic-text-box--pic:after {
+    box-shadow: inset 0 0 40px 16px; }
+
+.infinite-list {
+  overflow-y: scroll;
+  height: 87vh;
+  background-color: #1c1c1c; }
