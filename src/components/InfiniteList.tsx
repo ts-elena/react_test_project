@@ -32,10 +32,10 @@ const InfiniteList: React.FC<{ initialDataRequestLink: string }> = props => {
   }
 
   useEffect(() => {
-    loadUserList(props.initialDataRequestLink);
+    loadUserList(props.initialDataRequestLink, 1);
   }, []);
 
-  window.ontouchmove = debounce(() => {
+  const eventHandler = debounce(() => {
     setScrollTop(infiniteListWrapper.current.scrollTop);
     setScrollHeight(infiniteListWrapper.current.scrollHeight);
     setOffsetHeight(infiniteListWrapper.current.offsetHeight);
@@ -43,10 +43,15 @@ const InfiniteList: React.FC<{ initialDataRequestLink: string }> = props => {
     if (scrollTop === scrollHeight - offsetHeight) {
       loadUserList(props.initialDataRequestLink, lastDisplayedPage + 1);
     }
-  }, 200);
+  }, 100);
 
   return (
-    <div className="infinite-list" ref={infiniteListWrapper}>
+    <div
+      className="infinite-list"
+      ref={infiniteListWrapper}
+      onScroll={eventHandler}
+      onTouchMove={eventHandler}
+    >
       {userInfoArray === [] ? (
         <div>Nothing to display</div>
       ) : (

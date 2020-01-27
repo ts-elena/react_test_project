@@ -2,10 +2,14 @@ html {
   box-sizing: border-box;
 
   // Defines what 1ram should be, not typography
-  font-size: 62.5%;
+  font-size: 50%;
   height: 100vh;
   overflow: hidden;
   background-color: $color-primary-black;
+
+  @media (min-width: 600px) {
+    font-size: 50%;
+  }
 }
 
 *,
@@ -14,4 +18,8 @@ html {
 *::after {
   box-sizing: inherit;
   margin: 0;
+}
+
+.App {
+  height: 100%;
 }

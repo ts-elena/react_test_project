@@ -1,15 +1,21 @@
 import React from "react";
 import Header from "./components/Header";
-import RowList from "./components/RowList";
 import InfiniteList from "./components/InfiniteList";
+import LoadingScreen from "./pages/LoadingScreen";
 
 const App: React.FC = () => {
-  return (
-    <div className="App">
-      <Header />
-      <InfiniteList initialDataRequestLink="https://reqres.in/api/users" />
-    </div>
-  );
+  function getPage() {
+    const route = window.location.pathname;
+    if (route === "/loader") return <LoadingScreen />;
+    return (
+      <>
+        <Header />
+        <InfiniteList initialDataRequestLink="https://reqres.in/api/users" />
+      </>
+    );
+  }
+
+  return <div className="App">{getPage()}</div>;
 };
 
 export default App;
